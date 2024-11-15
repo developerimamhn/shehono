@@ -1,13 +1,322 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Eczar:wght@400..800&family=Patrick+Hand&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Eczar:wght@400..800&family=Jost:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Eczar:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  .pragraphtag {
+    @apply text-[16px] leading-[120%] tracking-[0.16px] sm:text-[18px] sm:leading-[130%] sm:tracking-[0.18px] md:text-[20px] md:leading-[140%] md:tracking-[0.20px] lg:text-[22px] lg:leading-[150%] lg:tracking-[0.22px] xl:text-[22px] xl:leading-[150%] xl:tracking-[0.22px]  2xl:text-[22px] 2xl:leading-[150%] 2xl:tracking-[0.22px] 
+  }
+  .headingtag {
+    @apply font-normal leading-[125%] dm-serif-display
+  }
+  .simpleButton {
+    @apply text-[16px] text-[#fff] font-semibold leading-[120%] tracking-[0.2px]   /* Default (mobile first) */
+    sm:text-[17px] sm:leading-[122%] sm:tracking-[0.28px]                    /* Small screens (640px and above) */
+    md:text-[18px] md:leading-[125%] md:tracking-[0.36px]                    /* Medium screens (768px and above) */
+    flex justify-center items-center 
+    py-[20px]                      /* Default padding for mobile */
+    sm:py-[22px]                   /* Padding for small screens (640px and above) */
+    md:py-[24px]                   /* Padding for medium screens (768px and above) */
+    lg:py-[26px]                   /* Padding for large screens (1024px and above) */
+    bg-[#CDA274] hover:bg-[#E4B17B] rounded-[18px] shadow-[0px_10px_20px_0px_rgba(192,192,192,0.35)] /* Background, border-radius, and shadow */
+    ease-in duration-300
+    
+  } 
+
+  .navbarManu{
+    @apply text-[#292F36] hover:text-[#C76904] font-medium leading-[125%] ease-in duration-100
+    text-[16px]                   /* Default text size for mobile */
+    sm:text-[18px]                /* Text size for small screens (640px and above) */
+    md:text-[20px]                /* Text size for medium screens (768px and above) */
+    lg:text-[22px]                /* Text size for large screens (1024px and above) */
+    xl:text-[24px]                /* Text size for extra-large screens (1280px and above) */
+    /* 2xl:text-[26px]               Text size for 2XL screens (1536px and above) */
+    jost                   /* Applying the 'Jost' font */              
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities{
+  .dm-serif-display{
+    font-family: "DM Serif Display", serif;
+    font-style: normal;
+  }
+  .jost {
+    font-family: "Jost", sans-serif;
+    font-style: normal;
+  }
+  .inter{
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+  }
+  
+  .hero-pattern{
+    background-image: url(./component/Header/image/Rectangle\ 1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100px 0px;
+    width: 100%;
+  }
+  .hero-pattern-contact{
+    background-image: url(./component/Header/image/Group\ 1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .rectangleten{
+    background-image: url(./component/body/articalNews/Rectangle\ 10.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .liner{
+    position: relative;
+    z-index: 0;
+  }
+  .liner::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+  }
+  .liner::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+  }
+
+  .bgservicehero{
+    background-image: url(./component/services22/image/Rectangle\ 20.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bgservicehero h2{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .bgservicehero_1 h2{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .bgservicehero_1{
+    background-image: url(./component/services0.2/image/Rectangle\ 20.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bgservicehero_2{
+    background-image: url(./component/pricing/image/Rectangle\ 20.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bgservicehero_3{
+    background-image: url(./component/ourprojects/images/Rectangle\ 20.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .hooverbody:hover .hoverchield{
+    background-color: #CDA274;
+  }
+  .hooverbody:hover .hoverchieldtext{
+    color: #CDA274;
+  }  
+
+
+
+
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 650px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.item {
+  padding: 18px 28px;
+  cursor: pointer;
+  transition: color 0.3s ease-out;
+  text-decoration: none;
+  color: #111;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.item.active {
+  color: #fff;
+}
+
+.indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 30px;
+}
+
+
+
+
+
+
+
+.btton-btn {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btton-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(205, 162, 116, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s ease-out;
+  z-index: -1;
+}
+
+.btton-btn:hover::before,
+.btton-btn:focus::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btton-btn:focus {
+  outline: none;
+}
+
+
+/* Animation1 */
+@keyframes slideInLeft {
+  from {
+    transform: translate(-220px, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0%);
+    opacity: 1;
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translate(-220px, -50%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.scroll-animate.visible {
+  animation: slideInLeft 1s forwards;
+}
+
+/* Animation2 */
+@keyframes slideInLefts {
+  from {
+    transform: translate(220px, 50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0%);
+    opacity: 1;
+  }
+}
+
+.scroll-animate2 {
+  opacity: 0;
+  transform: translate(220px, 50%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  overflow: hidden;
+}
+
+.scroll-animate2.visibles {
+  animation: slideInLefts 1s forwards;
+  overflow: hidden;
+}
+
+/* animation 3 */
+
+@keyframes slideInbottom {
+  from {
+    transform: translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.scroll-animate3 {
+  opacity: 0;
+  transform: translateY(50vh);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  overflow: hidden;
+}
+
+.scroll-animate3.visiblethree {
+  animation: slideInbottom 1s forwards;
+  overflow: hidden;
+}
+
+a.navbarManu.active {
+  color: #C76904;
+}
+a.footermanu.active {
+  color: #C76904;
+}
+
+.bgservicehero_4{
+  background-image: url(./component/projectDetails/image/Rectangle\ 20.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgservicehero_5{
+  background-image: url(./component/articleNews/images/Rectangle\ 20.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgservicehero_6{
+  background-image: url(./component/blogDetails//imagess/Rectangle\ 20.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 }
